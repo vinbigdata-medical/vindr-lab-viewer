@@ -1,0 +1,27 @@
+.annotation-info {
+  background: #fff;
+  min-width: 120px;
+  max-width: 240px;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.annotation-info .label-list {
+  padding-left: 15px;
+}
+
+.annotation-info .author-info {
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.annotation-info .author-info .ic-avatar{
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  border-radius: 50%;
+  margin-left: 7px;
+  font-size: 12px;
+}

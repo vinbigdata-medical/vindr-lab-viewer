@@ -1,0 +1,14 @@
+.add-label-wrapper {
+  position: relative;
+}
+
+.brush-label-list {
+  background: var(--app-nav-active-color);
+  /*position: absolute;*/
+  top: 60px;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  border-radius: var(--box-radius);
+  color: var(--default-color);
+}

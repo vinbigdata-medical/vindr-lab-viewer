@@ -1,0 +1,30 @@
+.popup-select-label,
+.flip-annotation-3d {
+  margin-top: 10px;
+  background: var(--primary-background-color);
+  border-radius: var(--box-radius);
+  padding: 10px;
+}
+
+.flip-annotation-3d {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flip-annotation-3d .flip-item {
+  color: var(--default-color);
+  cursor: pointer;
+}
+
+.flip-annotation-3d .divider-item {
+  width: 1px;
+  background: var(--default-color);
+}
+
+.label-section-inner__list__item.disabled-btn {
+  cursor: not-allowed !important;
+}
+
+.label-section-inner__list__item .title-item {
+  margin-left: 5px;
+}

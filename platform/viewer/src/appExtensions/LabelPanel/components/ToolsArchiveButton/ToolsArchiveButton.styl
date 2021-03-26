@@ -1,0 +1,27 @@
+.archive-section
+  .btn-archive
+    background: var(--app-nav-active-color)
+    border: none;
+    color: var(--default-color)
+  .archive-messsage
+    color: var(--default-color)
+    margin-right: 7px
+    font-style italic
+
+  .archive-list
+    padding-left 15px
+    margin: 5px 0;
+    li
+      list-style-type none
+      position relative
+    li::before
+      content: ""
+      background: var(--active-color)
+      display: inline-block
+      width: 6px
+      height 6px
+      position absolute
+      border-radius 50%
+      top 8px
+      left -12px
+

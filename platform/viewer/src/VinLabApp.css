@@ -1,0 +1,139 @@
+html,
+body,
+#root {
+  background-color: #1e2025;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Roboto, OpenSans, HelveticaNeue-Light, Helvetica Neue Light,
+    Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+}
+
+body {
+  font-size: 14px;
+  line-height: 1.42857143;
+}
+
+#root .fade-enter {
+  opacity: 0;
+}
+
+#root .fade-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+
+#root .fade-exit {
+  opacity: 1;
+}
+
+#root .fade-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #a0a0a0;
+}
+
+:root {
+  /* Sizes */
+
+  --top-bar-height: 40px;
+  --top-bar-expanded-height: 160px;
+  --toolbar-height: 40px;
+  --toolbar-drawer-height: 62px;
+  --left-sidepanel-menu-width: 222px;
+  --right-sidepanel-menu-width: 329px;
+  --study-list-padding: 8%;
+  --study-list-padding-medium-screen: 10px;
+  --snackbar-size: 344px;
+  --box-radius: 10px;
+  --left-nav-width: 87px;
+  --tiny-radius: 5px;
+  --panel-header-height: 70px;
+
+  /* Transitions */
+
+  --transition-duration: 0.3s;
+  --transition-effect: ease;
+  --sidepanel-transition: all 0.3s ease;
+
+  /* Thicknesses */
+
+  --viewport-border-thickness: 1px;
+  --ui-border-thickness: 1px;
+
+  /** Colors **/
+
+  --snackbar-success: rgba(94, 164, 0, 0.9);
+  --snackbar-error: rgba(236, 61, 61, 0.9);
+  --snackbar-warning: rgba(235, 173, 23, 0.9);
+  --snackbar-info: rgba(54, 156, 199, 0.9);
+
+  /** z-Index **/
+  --snackbar-zIndex: 1075;
+
+  /** DatePicker Colors **/
+  --datePicker-input-background: #2c363f;
+  --datePicker-picker-background: #9ccef9;
+  --datePicker-picker-disabled: #d3d3d3;
+  --datePicker-picker-text: #484848;
+  --datePicker-picker-text-disabled: #aaa;
+  --datePicker-picker-text-input: #fff;
+
+  /* Interface UI Colors */
+  --default-color: #d1d1d7;
+  --hover-color: #d1d1d7;
+  --active-color: #40cd92;
+  --danger-color: #ff4d4f;
+  --ui-border-color: #44626f;
+  --primary-background-color: #4c4e5766;
+  --box-background-color: #26292e;
+  --dark-green: #1e5840;
+
+  /* app colors */
+  --app-primary-color: #40cd92;
+  --app-background-box: #26292e;
+  --app-nav-active-color: #4c4e57;
+  --app-nav-background-color: #4c4e5766;
+  --app-text-button-color: #1b1f38;
+  --app-hover-item-color: #40cd9280;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 7px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 7px;
+  background: #586472;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+}

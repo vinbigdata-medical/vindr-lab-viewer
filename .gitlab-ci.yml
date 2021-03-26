@@ -1,0 +1,74 @@
+.job-build-docker-image: &build-docker-image
+  image: docker:stable
+  services:
+    - docker:dind
+  variables:
+    DOCKER_HOST: tcp://docker:2375/
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: ""
+  before_script:
+    - apk add python3 py-pip
+    - echo ${DOCKERHUB_PASSWORD} | docker login --username ${DOCKERHUB_USERNAME} --password-stdin
+    - export DOCKER_IMAGE_NAME=vindr/vinlab-viewer:latest
+
+image: node:lts
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+
+before_script:
+  - ls -la .
+  - yarn install --ignore-engines
+  - node -v
+
+stages:
+  - test
+  - build-docker-image
+  - deploy
+
+unit-test:
+  stage: test
+  except:
+    - tags
+  script:
+    - yarn test
+
+build-docker-image:latest:
+  <<: *build-docker-image
+  stage: build-docker-image
+  only:
+    - master
+    - develop
+    - cicd
+    - open-source
+  script:
+    - docker build -t ${DOCKER_IMAGE_NAME} .
+    - docker push ${DOCKER_IMAGE_NAME}
+
+build-docker-image:tags:
+  <<: *build-docker-image
+  stage: build-docker-image
+  only:
+    - tags
+  script:
+    - docker build -t ${DOCKER_REGISTRY}/${DOCKER_IMAGE_NAME}:${CI_COMMIT_REF_NAME} .
+    - docker push ${DOCKER_REGISTRY}/${DOCKER_IMAGE_NAME}:${CI_COMMIT_REF_NAME}
+
+deploy:
+  stage: deploy
+  environment:
+    name: dev
+  only:
+    - develop
+  tags:
+    - cicd
+  script:
+    - echo ${KUBECONFIG}
+    - echo ${KUBEREPO}
+    - cd ${KUBEREPO}; \
+    - ./set_secret.sh; \
+    - kubectl apply -f vinlab-viewer.deployment.yml -n vinlab-dev; \
+    - kubectl apply -f viewer.service.yaml -n vinlab-dev; \
+    - kubectl rollout restart deployment vinlab-viewer-deployment -n vinlab-dev;

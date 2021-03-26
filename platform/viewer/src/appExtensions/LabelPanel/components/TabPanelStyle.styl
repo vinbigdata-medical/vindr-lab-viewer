@@ -1,0 +1,75 @@
+.tab-panel-item-list {
+  width: 80%;
+  margin: 10px auto 0 auto;
+  color: var(--default-color);
+
+  .tab-panel-item {
+    color: var(--default-color);
+    margin-bottom: 5px;
+    width: 100%;
+
+    .sub-label .ant-radio-wrapper {
+      margin: 5px 0;
+    }
+  }
+}
+
+.findings-boxes {
+  .box-list-wrapper {
+    margin-top: 15px;
+  }
+
+  .box-list {
+    .box-item {
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      box-sizing: border-box;
+      border-radius: 2px;
+      margin: 8px 8px 0 0;
+      width: 20px;
+      height: 20px;
+      font-size: 12px;
+      text-align: center;
+      line-height: 20px;
+      float: left;
+      cursor: pointer;
+
+      &:hover {
+        background: var(--active-color);
+        color: var(--app-text-button-color);
+        border-color: var(--active-color);
+      }
+
+      &.active-box {
+        background: var(--active-color);
+      }
+    }
+  }
+}
+
+.impression-list {
+  .impression-item {
+    border-radius: var(--box-radius);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    margin: 5px 0;
+    color: var(--default-color);
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+  }
+}
+
+.clear-both {
+  &:after, &:before {
+    clear: both;
+    content: '';
+    display: block;
+  }
+}
+
+.impression-list-wrapper {
+  max-height: 400px;
+  overflow-y: auto;
+}

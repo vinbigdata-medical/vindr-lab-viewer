@@ -1,0 +1,52 @@
+.header-action {
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  width: 95%;
+  margin: auto;
+  height: var(--panel-header-height);
+  margin-bottom: 5px;
+
+  .btn-action {
+    box-sizing: border-box;
+    border-radius: var(--box-radius);
+    height: 28px;
+    line-height: 28px;
+    font-weight: bold;
+  }
+
+  .btn-complete {
+    width: 100%;
+  }
+
+  .study-status {
+    color: var(--default-color);
+    font-size: 18px;
+    height: var(--toolbar-height);
+    display: flex;
+
+    .study-status-content {
+      margin: auto;
+    }
+
+    .hightlight {
+      color: var(--active-color);
+      text-transform: capitalize;
+    }
+  }
+
+  .two-buttons-inline {
+    display: flex;
+    justify-content: space-between;
+
+    .wrap-btn {
+      width: 49%;
+    }
+  }
+}
+
+.btn-complete-tooltip {
+  .ant-tooltip-inner {
+    color: red;
+  }
+}

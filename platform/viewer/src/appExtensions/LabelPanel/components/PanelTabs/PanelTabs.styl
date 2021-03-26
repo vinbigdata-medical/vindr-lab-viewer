@@ -1,0 +1,55 @@
+.panel-nav {
+  .panel-nav-content {
+    color: var(--default-color);
+    background: var(--app-background-box);
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    border-top-left-radius: var(--box-radius);
+    border-top-right-radius: var(--box-radius);
+    transition: 0.3s all ease-in-out;
+    padding: 0 30px;
+
+    .panel-nav-item-wrapper {
+      position: relative;
+      width: 50%;
+      text-align: center;
+      .panel-top-corners, .panel-bottom-corners {
+        display: none;
+      }
+      color: rgba(255, 255, 255, 0.5);
+      border-bottom: 2px solid #f1f1f1;
+      &.active-item {
+        border-bottom: 2px solid var(--active-color)
+        color: rgba(255, 255, 255, 0.8);
+      }
+      &.freeze-tab {
+        cursor not-allowed !important
+      }
+      &.not-freeze-tab {
+         cursor pointer
+      }
+    }
+    .panel-nav-item {
+        padding: 5px 0 8px 0;
+        position: relative;
+        .title, .nav-item-info {
+          font-size: 16px;
+          font-weight: 900;
+        }
+        .nav-icons {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 7px 0;
+          .arrow-ic {
+            font-size: 13px;
+          }
+          .main-ic {
+            font-size: 24px;
+            padding: 0 8px;
+          }
+        }
+    }
+  }
+}

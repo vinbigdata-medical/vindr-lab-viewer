@@ -1,0 +1,198 @@
+.label-panel-container {
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+
+  .label-wrapper {
+    padding: 8px;
+    overflow: hidden;
+    overflow-y: auto;
+    height: 100%;
+
+    .label-content {
+      min-height: 100%;
+      background: var(--app-background-box);
+      border-radius: var(--box-radius);
+      padding: 0 8px;
+
+      .label-group {
+        display: flex;
+        padding: 20px 6px 0 6px;
+        align-items: center;
+        color: var(--default-color);
+        white-space: nowrap;
+
+        .lb-text {
+          font-size: 18px;
+          font-weight: 500;
+          margin-right: 7px;
+        }
+
+        .select-group {
+          width: 100%;
+          color: var(--default-color);
+
+          .ant-select-selection {
+            background: var(--primary-background-color);
+            border: none;
+            border-radius: 9px;
+            box-shadow: none;
+            -webkit-box-shadow: none;
+          }
+
+          .ant-select-arrow {
+            color: var(--default-color);
+          }
+        }
+      }
+
+      .label-list {
+        color: var(--default-color);
+        margin-top: 20px;
+
+        .lb-wrapper {
+          background: var(--primary-background-color);
+          border-radius: 9px;
+          padding: 7px;
+
+          .lb-type {
+            margin-bottom: 10px;
+          }
+
+          .lb-item {
+            width: 100%;
+            height: 52px;
+            border: 2px solid var(--app-primary-color);
+            box-sizing: border-box;
+            border-radius: 5px;
+            margin-bottom: 8px;
+            padding: 4px 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+
+            &.active-item, &:hover {
+              background-color: var(--app-primary-color);
+              border-color: var(--app-primary-color) !important;
+              color: var(--primary-background-color);
+            }
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            .lb-info {
+              display: flex;
+              align-items: center;
+              height: 15px;
+              line-height: 15px;
+
+              .lb-icon {
+                font-size: 12px;
+                margin-right: 5px;
+              }
+
+              .lb-scope {
+                font-size: 10px;
+              }
+
+              .annotation-count {
+                margin-left: auto;
+                font-size: 10px;
+              }
+            }
+
+            .lb-name {
+              font-size: 12px;
+              line-height: 14px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.label-section {
+  .ant-select-selection {
+    background: var(--app-background-box);
+    border: none;
+    border-radius: var(--box-radius);
+    padding: 5px;
+  }
+
+  .ant-select-selection--multiple .ant-select-selection__choice {
+    background: var(--dark-green);
+    border: none;
+    border-radius: var(--tiny-radius);
+    line-height: 24px;
+    color: #fff;
+  }
+
+  .label-section-inner {
+    padding: 5px;
+
+    &__title {
+      font-weight: 500;
+      font-size: 14px;
+      margin-top: 5px;
+      color: var(--default-color);
+    }
+
+    &__subtitle {
+      font-weight: 400;
+      font-size: 14px;
+      margin-top: 5px;
+      color: var(--default-color);
+    }
+
+    &__labellers {
+      padding: 10px;
+      background: var(--app-background-box);
+      border-radius: var(--box-radius);
+      color: var(--default-color);
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+
+      .text-placehoder {
+        color: rgba(255, 255, 255, 0.3);
+      }
+    }
+
+    &__list {
+      background: rgba(76, 78, 87, 0.4);
+      border-radius: var(--box-radius);
+      display: flex;
+      justify-content: space-around;
+
+      &__item {
+        color: var(--default-color);
+        text-align: center;
+        padding: 5px;
+        width: 100%;
+        height: 30px;
+        border-radius: var(--box-radius);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.active {
+          color: var(--active-color);
+          background: var(--app-nav-active-color);
+        }
+
+        & > svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}

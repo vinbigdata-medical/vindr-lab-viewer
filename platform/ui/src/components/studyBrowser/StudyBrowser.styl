@@ -1,0 +1,84 @@
+.study-browser {
+  float: left;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: inherit;
+  display: flex;
+  position: relative;
+
+  .study-list {
+    color: var(--default-color);
+
+    .study-item {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 3px;
+      margin-bottom: 5px;
+      cursor: pointer;
+      border-radius: 4px;
+
+      &.active-item {
+        border: 1px solid var(--app-primary-color);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        background-color: rgba(0, 184, 148, 0.2);
+      }
+    }
+  }
+
+  .nav-container {
+    padding-left: 8px;
+    height: 100%;
+    text-align: center;
+    z-index: 0;
+  }
+
+  .scrollable-study-thumbnails {
+    height: calc(100% - var(--toolbar-height) - var(--top-bar-height));
+    overflow-y: auto;
+    overflow-x: hidden;
+    // width: 100%;
+    background: var(--app-nav-active-color);
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius: var(--box-radius);
+    border-bottom-right-radius: var(--box-radius);
+    padding: 8px;
+    width: 127px;
+    position: fixed;
+    z-index: 200;
+    left: calc(var(--left-nav-width) + 7px);
+    transform: none;
+
+    // -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.7, 0.3, 0.1, 1), -webkit-box-shadow 0.3s cubic-bezier(0.7, 0.3, 0.1, 1);
+    // transition: -webkit-transform 0.3s cubic-bezier(0.7, 0.3, 0.1, 1), -webkit-box-shadow 0.3s cubic-bezier(0.7, 0.3, 0.1, 1);
+    // transition: transform 0.3s cubic-bezier(0.7, 0.3, 0.1, 1), box-shadow 0.3s cubic-bezier(0.7, 0.3, 0.1, 1);
+    // transition: transform 0.3s cubic-bezier(0.7, 0.3, 0.1, 1), box-shadow 0.3s cubic-bezier(0.7, 0.3, 0.1, 1), -webkit-transform 0.3s cubic-bezier(0.7, 0.3, 0.1, 1), -webkit-box-shadow 0.3s cubic-bezier(0.7, 0.3, 0.1, 1);
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .thumbnail-container {
+      .noselect {
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer */
+        -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+        -webkit-user-select: none; /* Chrome, Safari, and Opera */
+        -webkit-touch-callout: none; /* Disable Android and iOS callouts */
+      }
+    }
+  }
+}
+
+.draggable {
+  cursor: copy;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+}

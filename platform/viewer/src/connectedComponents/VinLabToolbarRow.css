@@ -1,0 +1,23 @@
+.ToolbarRow {
+  flex: 0 0 auto;
+  height: var(--toolbar-height);
+  padding-left: 8px;
+  position: relative;
+  transition: height 300ms ease;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.ToolbarRow .toolbar-wrapper {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  background: var(--box-background-color);
+  border-radius: var(--box-radius);
+}
+
+ToolbarRow.expanded {
+  height: calc(var(--toolbar-height) + var(--toolbar-drawer-height));
+}

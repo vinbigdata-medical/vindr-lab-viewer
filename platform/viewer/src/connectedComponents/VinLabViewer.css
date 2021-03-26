@@ -1,0 +1,43 @@
+#viewer {
+  background-color: black;
+  width: 100%;
+}
+
+.loadingTextDiv {
+  color: var(--text-secondary-color);
+  font-size: 30px;
+}
+
+.vin-lab-viewer-container {
+  height: 100%;
+  width: 100%;
+}
+
+.vin-lab-viewer-container .viewer-wrapper {
+  height: calc(100vh - var(--top-bar-height));
+  display: flex;
+  overflow: hidden;
+}
+
+.vin-lab-viewer-container .system-loading {
+  max-height: unset !important;
+}
+
+.vin-lab-viewer-container .viewer-wrapper .left-content-viewer {
+  width: 100%;
+  height: 100%;
+  max-width: calc(100% - var(--right-sidepanel-menu-width));
+}
+
+.vin-lab-viewer-container
+  .viewer-wrapper
+  .right-content-viewer
+  .sidepanel.from-right.is-open {
+  width: var(--right-sidepanel-menu-width);
+  overflow: hidden;
+  border: none;
+}
+
+.FlexboxLayout {
+  height: calc(100% - var(--toolbar-height));
+}

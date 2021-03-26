@@ -1,0 +1,21 @@
+.imageViewerLoadingIndicator {
+  color: #91b9cd;
+}
+
+.vtk-viewport-content .imageViewerLoadingIndicator h2 {
+  color: var(--default-color);
+}
+
+.vtk-viewport-content .loadingIndicator {
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 18px;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  /* Necessary for click-through to vtkjs element below */
+  pointer-events: none;
+}
