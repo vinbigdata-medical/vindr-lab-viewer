@@ -1,12 +1,14 @@
-## About
-The Vinlab Viewers is for viewing medical images. It can retrieve and load images from most sources and formats; render sets in 2D, 3D, and reconstructed representations; allows for the manipulation, annotation, and serialization of observations; supports internationalization, hotkeys, and many more features.
+<img src="./platform/viewer/public/assets/vinlab/vindr_lab_logo.png" width="256"/>
+
+# VinDr Lab / Viewer
+The Vindr Lab Viewer is for viewing medical images. It can retrieve and load images from most sources and formats; render sets in 2D, 3D, and reconstructed representations; allows for the manipulation, annotation, and serialization of observations; supports internationalization, hotkeys, and many more features.
 
 ## Developing
-The Vinlab project consists of 2 parts. So let's clone and run both projects together.
-- [Vinlab Dashboard][vinlab-dashboard-url]: To manage Projects, Study list, Label, setting, Export label,...
-- [Vinlab Viewers][vinlab-viewers-url]: For viewing medical images, labeling (bounding box, polygon, segment).
+The VindrLab project consists of two parts. So let's clone and run both projects together.
+- [Vindr Lab Dashboard][vindr-lab-dashboard-url]: To manage Projects, Study list, Label, setting, Export label,...
+- [Vindr Lab Viewer][vindr-lab-viewer-url]: For viewing medical images, labeling (bounding box, polygon, segment).
 
-The Vinlab Viewers base on [OHIF][ohif-url] project. For more detail about configure, please read the [documentation][ohif-documents-url].
+The Vindr Lab Viewer base on [OHIF][ohif-url] project. For more detail about configure, please read the [documentation][ohif-documents-url].
 
 ### Requirements
 
@@ -19,14 +21,14 @@ The Vinlab Viewers base on [OHIF][ohif-url] project. For more detail about confi
 
 1. [Fork this repository][how-to-fork]
 2. [Clone your forked repository][how-to-clone]
-   - `git clone https://github.com/YOUR-USERNAME/vinlab-viewers.git`
+   - `git clone https://github.com/YOUR-USERNAME/vindr-lab-viewer.git`
 3. Navigate to the cloned project's directory
 4. Add this repo as a `remote` named `upstream`
-   - `git remote add upstream https://github.com/vinbigdata-medical/vinlab-viewers.git`
+   - `git remote add upstream https://github.com/vinbigdata-medical/vindr-lab-viewer.git`
 5. `yarn install` to restore dependencies and link projects
 6. `yarn start` to run project.
 
-Note: This project will be opened from the [vinlab-dashboard][vinlab-dashboard-url] project. So, let's clone and run it before running this project.
+Note: This project will be opened from the [vindr-lab-dashboard][vindr-lab-dashboard-url] project. So, let's clone and run it before running this project.
 
 #### To Develop
 
@@ -94,7 +96,7 @@ These projects comprise the
 | ------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | [@ohif/core][platform-core]     | Business logic and classes that model the data, services, and extensions that are framework agnostic |
 | [@ohif/i18n][platform-i18n]     | Language files and small API for wrapping component/ui text for translations                         |
-| [@ohif/viewer][platform-viewer] | The Vinlab Viewer. Where we consume and configure all platform library's and extensions              |
+| [@ohif/viewer][platform-viewer] | The Vindr Lab Viewer. Where we consume and configure all platform library's and extensions              |
 | [@ohif/ui][platform-ui]         | Reusable React components we consume and compose to build our Viewer's UI                            |
 
 ### Extensions
@@ -108,6 +110,16 @@ These projects comprise the
 | [@ohif/extension-vtk][extension-vtk]                           | 2D MPR                                                  |
 
 
+## Acknowledgement
+
+**Note:** If you use or find this repository helpful, please take the time to star this repository on Github. This is an easy way for us to assess adoption and it can help us obtain future funding for the project.
+
+This work is supported primarily by [Vingroup Big Data Institute](http://vinbigdata.org/)
+## License
+
+[MIT License](https://github.com/vinbigdata-medical/vinlab-sites/blob/master/LICENSE)
+
+
 <!--
   Links
   -->
@@ -116,8 +128,8 @@ These projects comprise the
 <!-- Links -->
 [ohif-url]: https://github.com/OHIF/Viewers
 [ohif-documents-url]: https://docs.ohif.org/
-[vinlab-dashboard-url]: https://github.com/vinbigdata-medical/vinlab-dashboard
-[vinlab-viewers-url]: https://github.com/vinbigdata-medical/vinlab-viewers
+[vindr-lab-dashboard-url]: https://github.com/vinbigdata-medical/vindr-lab-dashboard
+[vindr-lab-viewer-url]: https://github.com/vinbigdata-medical/vindr-lab-viewer
 [monorepo]: https://en.wikipedia.org/wiki/Monorepo
 [how-to-fork]: https://help.github.com/en/articles/fork-a-repo
 [how-to-clone]: https://help.github.com/en/articles/fork-a-repo#step-2-create-a-local-clone-of-your-fork
